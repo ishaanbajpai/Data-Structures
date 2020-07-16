@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class BubbleSort 
 { 
     void bubbleSort(int arr[]) 
@@ -23,8 +24,14 @@ public class BubbleSort
    
     public static void main(String args[]) 
     { 
+        Scanner obj = new Scanner(System.in);
         BubbleSort ob = new BubbleSort(); 
-        int arr[] = {64, 34, 25, 12, 22, 11, 90}; 
+        int n = obj.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i] = obj.nextInt();
+        }  
         ob.bubbleSort(arr); 
         System.out.println("Sorted array"); 
         ob.printArray(arr); 
